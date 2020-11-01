@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Room homepage</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class = "image-hero">
+      <img class = "img" id="image-adaptive">
+      <ul id = "menu" class = "text">
+        <li><img src="./images/logo.svg"></li>
+        <li><a href src="#">home</a></li>
+        <li><a href src="#">shop</a></li>
+        <li><a href src="#">about</a></li>
+        <li><a href src="#">contact</a></li>
+      </ul>
+    </div>
+    <div class = "desc1 text">
+      <h1 id = "headline"></h1>
+      <div id = "description"></div>
+      <div id = "buy">
+        <a href src ="#" class = "buy-link">SHOP  NOW</a>
+        <img class = "buy-link" src="./images/icon-arrow.svg">
+      </div>
+      <div id = "buttons">
+          <input type="image" class="btn-arrow" src="./images/icon-angle-left.svg" onclick = "changeText(--currentText)"></input>
+          <input type="image" class="btn-arrow" src="./images/icon-angle-right.svg" onclick = "changeText(++currentText)"></input>
+      </div>
+    </div>>
+    <img class = "image-about-dark img" src="./images/image-about-dark.jpg">
+    <div class = "desc2 text">
+        <h2>About our furniture</h2>
+        <p>Our multifunctional collection blends design and function to suit your individual taste.
+        Make each room unique, or pick a cohesive theme that best express your interests and what
+        inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+        or anything in between. Product specialists are available to help you create your dream space.</p>
+    </div>
+    <img class = "image-about-light img" src="./images/image-about-light.jpg">
+  </div>
+</body>
+</html> 

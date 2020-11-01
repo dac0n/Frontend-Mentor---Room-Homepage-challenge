@@ -1,0 +1,113 @@
+body {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    background-color: rgb(235, 235, 235);
+}
+
+.image-hero { 
+    position: relative; 
+    grid-area: image-hero; 
+}
+.desc1 { grid-area: desc-1; }
+.image-about-dark { grid-area: image-about-dark;}
+.desc2 { grid-area: desc-2; }
+.image-about-light { grid-area: image-about-light; }
+
+.wrapper {
+    margin: auto;
+    min-width:1440px;
+    max-width: 1920px;
+    background-color: white;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 29.1% 29.1% 11.3% 30.5%;
+    grid-template-rows: 66.75% 33.25%;
+    grid-template-areas: 
+    "image-hero image-hero desc-1 desc-1"
+    "image-about-dark desc-2 desc-2 image-about-light";
+}
+
+.desc1, .desc2{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.img {
+    width:100%;
+    height: 100%;
+    display: block; /* remove extra space below image */
+}
+ul {
+    position: absolute;
+    top: 20px;
+    left: 8px;
+    color: white;
+}
+
+ul li {
+
+    display: inline;
+    padding: 0px 13px;
+}
+.text{
+    font-family: 'Spartan';
+    font-size: 12px;
+    font-weight: 500;  
+    padding: 50px;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#buy{
+    display: inline;
+    position: relative;
+    top: 20px;
+}
+
+.buy-link {
+    color: black;
+    letter-spacing: 0.3em;
+    padding-right: 1em;
+}
+
+#buttons {
+    width: 27.03%;
+    display:flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.btn-arrow {
+    width: 100%;
+    padding: 10% 20%;
+    background: black;
+    outline:none;
+}
+
+li a:hover{
+    border-bottom: 2px solid;
+    padding-bottom: 5px;
+}
+
+
+.btn-arrow:hover {
+    background-color: hsl(0, 0%, 63%);
+  }
+
+
+
