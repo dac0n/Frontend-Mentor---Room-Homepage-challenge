@@ -26,7 +26,6 @@ body {
 .wrapper {
     background-color: white;
     box-shadow: 10px 10px 10px  rgba(0, 0, 0, 0.3);
-    min-width:1440px;
     max-width: 1920px;
     display: grid;
     grid-gap: 0px;
