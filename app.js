@@ -26,6 +26,9 @@ const headline = document.getElementById("headline");
 const description = document.getElementById("description");
 const image = document.getElementById("image-adaptive")
 const buyButton = document.getElementById("buy");
+
+let nextItemButton = document.getElementsByClassName('btn-arrow');
+
 let textAmount = views.length;
 let currentText = 0;
 
