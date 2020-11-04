@@ -129,6 +129,21 @@ ul {
     }
 
 }
+
+@media (hover: hover) {
+
+li a:hover{
+    border-bottom: 2px solid;
+    padding-bottom: 5px;
+}
+
+
+.btn-arrow:hover {
+    background-color: hsl(0, 0%, 63%);
+  }
+
+}
+
 .desc1, .desc2{
     
     display: flex;
@@ -188,12 +203,3 @@ a {
 
 
 
-li a:hover{
-    border-bottom: 2px solid;
-    padding-bottom: 5px;
-}
-
-
-.btn-arrow:hover {
-    background-color: hsl(0, 0%, 63%);
-  }
