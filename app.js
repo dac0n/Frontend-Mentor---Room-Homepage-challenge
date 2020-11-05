@@ -22,18 +22,42 @@ let views = [
   }
 ]
 
+var mediaCheck = window.matchMedia("(min-width: 768px)")
+
 const headline = document.getElementById("headline");
 const description = document.getElementById("description");
 const image = document.getElementById("image-adaptive")
 const buyButton = document.getElementById("buy");
+document.getElementById("open-menu").addEventListener("click", toggleMenu, false);
+const navMenu = document.getElementById("menu");
+const logo = navMenu.firstElementChild;
 
+let logoClone = logo.cloneNode(true);
+let navMenuClone = navMenu.cloneNode(true);
+let toggleNavMenu = 1;
 let nextItemButton = document.getElementsByClassName('btn-arrow');
-
 let textAmount = views.length;
 let currentText = 0;
 
 
+if (!mediaCheck.matches) toggleMenu();
 changeText(currentText);
+
+
+function toggleMenu() {
+  if (toggleNavMenu) {
+    navMenu.innerHTML = logoClone.innerHTML;  //shows logo
+    navMenu.style.padding = '0';
+    let dinamicalPadding = (((window.screen.width/2-navMenu.offsetWidth/2)/window.screen.width)*100).toFixed(4)+'%';
+    navMenu.style.right = dinamicalPadding;
+    toggleNavMenu = 0;
+  }
+  else {
+    navMenu.innerHTML = navMenuClone.innerHTML;   //shows navigation menu
+    navMenu.style.right = '5%';
+    toggleNavMenu = 1;
+  }
+};
 
 function changeText(index){
     currentText = index<0 ? textAmount-1 : index>2 ? 0 : index;  //allows to go from last array element to first and vice versa

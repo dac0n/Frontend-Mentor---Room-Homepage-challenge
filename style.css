@@ -3,14 +3,7 @@ html, body {
     margin: 0;
 }
 
-body {
-    margin: 0;
-    background-image: url("./images/background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.image-hero { position: relative; grid-area: image-hero; }
+.image-hero { position: relative; grid-area: image-hero;}
 .desc1 { grid-area: desc-1; pointer-events: none;}
 
 .image-about-dark { grid-area: image-about-dark;}
@@ -37,10 +30,6 @@ body {
 
 }
 
-ul {
-    display: none;
-}
-
 .buttons { 
     margin-left: 70%;
     width: 30%;
@@ -65,11 +54,25 @@ ul {
     padding: 10%;
 }
 
+ul {
+    right: 5%;
+}
+
+ul li img {
+    display: none;
+}
+
+#open-menu {
+    z-index: 2;
+    top: 12% !important;
+    left: 8%;
+    height: auto;
+}
+
+
 /* for desktops */
 
-
-
-@media only screen and (min-width: 768px) {
+@media only screen and (orientation: landscape) and (min-width: 768px) {
     
     .buttons { grid-column: 3/4; grid-row: 1/2;}
 
@@ -77,6 +80,13 @@ ul {
         overflow: hidden;
         height: 100%;
         width: 100%;
+    }
+
+    body {
+        margin: 0;
+        background-image: url("./images/background.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     .centered-div{
@@ -96,8 +106,17 @@ ul {
         "image-about-dark desc-2 desc-2 image-about-light";
     }
 
+    ul li img {
+        display: initial;
+    }
+
+    #open-menu {
+        display: none;
+    }
+
     ul {
         display: inline-block;
+        right: initial;
     }
 
 
@@ -130,6 +149,10 @@ ul {
 
 }
 
+@media only screen and (orientation: portrait){
+    .wrapper{box-shadow: none;}
+}
+
 @media (hover: hover) {
 
 li a:hover{
@@ -145,7 +168,6 @@ li a:hover{
 }
 
 .desc1, .desc2{
-    
     display: flex;
     position: relative;
     flex-direction: column;
@@ -157,17 +179,17 @@ li a:hover{
     width:100%;
     display: block; /* remove extra space below image */
 }
-ul {
+ul, #open-menu{
     position: absolute;
-    top: 5%;
+    top: 8%;
     color: white;
 }
 
 ul li {
-
     display: inline;
     padding: 0px 13px;
 }
+
 .text{
     font-family: 'Spartan';
     font-size: 12px;
