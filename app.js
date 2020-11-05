@@ -47,8 +47,7 @@ changeText(currentText);
 function toggleMenu() {
   if (toggleNavMenu) {
     navMenu.innerHTML = logoClone.innerHTML;  //shows logo
-    navMenu.style.padding = '0';
-    let dinamicalPadding = (((window.screen.width/2-navMenu.offsetWidth/2)/window.screen.width)*100).toFixed(4)+'%';
+    let dinamicalPadding = (((window.screen.width/2-(navMenu.offsetWidth-40)/2)/window.screen.width)*100).toFixed(3)+'%';
     navMenu.style.right = dinamicalPadding;
     toggleNavMenu = 0;
   }
