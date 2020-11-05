@@ -22,14 +22,15 @@ let views = [
   }
 ]
 
-var mediaCheck = window.matchMedia("(min-width: 768px)")
+let mediaCheck = window.matchMedia("(min-width: 768px)")
 
 const headline = document.getElementById("headline");
 const description = document.getElementById("description");
 const image = document.getElementById("image-adaptive")
 const buyButton = document.getElementById("buy");
-document.getElementById("open-menu").addEventListener("click", toggleMenu, false);
+const openMenu = document.getElementById("open-menu");
 const navMenu = document.getElementById("menu");
+const placeholder = document.getElementById("placeholder");
 const logo = navMenu.firstElementChild;
 
 let logoClone = logo.cloneNode(true);
@@ -39,6 +40,7 @@ let nextItemButton = document.getElementsByClassName('btn-arrow');
 let textAmount = views.length;
 let currentText = 0;
 
+openMenu.addEventListener("click", toggleMenu, false);
 
 window.onload = () => {
   if (!mediaCheck.matches) toggleMenu();
@@ -52,11 +54,15 @@ function toggleMenu() {
     navMenu.innerHTML = logoClone.innerHTML;  //shows logo
     let dinamicalPadding = (((window.screen.width/2-(navMenu.offsetWidth-40)/2)/window.screen.width)*100).toFixed(3)+'%';
     navMenu.style.right = dinamicalPadding;
+    placeholder.style.display = "none";
+    openMenu.src = "./images/icon-hamburger.svg";
     toggleNavMenu = 0;
   }
   else {
     navMenu.innerHTML = navMenuClone.innerHTML;   //shows navigation menu
     navMenu.style.right = '5%';
+    placeholder.style.display = "block";
+    openMenu.src = "./images/icon-close.svg";
     toggleNavMenu = 1;
   }
 };
@@ -67,3 +73,5 @@ function changeText(index){
     description.innerHTML = views[currentText].description;
     image.src = views[currentText].imageSrc;
 }
+
+

@@ -60,7 +60,6 @@ html, body {
     width: 50%;
     box-sizing: border-box;
     padding: 10% 20%;
-    outline: none;
     flex-direction: row;
 }
 
@@ -69,6 +68,7 @@ html, body {
 }
 
 ul {
+    z-index: 2;
     right: 5%;
 }
 
@@ -76,13 +76,31 @@ ul li img {
     display: none;
 }
 
+#placeholder {
+    z-index: 1;
+    position: absolute;
+    height: 25%;
+    width: 100%;
+    top: 0px;
+    background-color: white;
+}
+
 #open-menu {
-    z-index: 2;
+    z-index: 3;
     top: 12% !important;
     left: 8%;
     height: auto;
 }
 
+.btn-arrow, #open-menu {
+    outline: none;
+}
+
+ul li a {
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
 
 /* for desktops */
 
@@ -161,6 +179,14 @@ ul li img {
         top: 3%;
     }
 
+    #placeholder {
+        display: none;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: white;
+    }
 }
 
 @media only screen and (orientation: portrait){
@@ -219,8 +245,7 @@ h2 {
 }
 
 a {
-    text-decoration: none;
-    color: white;
+
 }
 
 #buy{
