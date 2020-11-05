@@ -40,7 +40,10 @@ let textAmount = views.length;
 let currentText = 0;
 
 
-window.onload = () => {if (!mediaCheck.matches) toggleMenu();} 
+window.onload = () => {
+  if (!mediaCheck.matches) toggleMenu();
+  document.getElementById("hide-all").style.display = "none";
+} 
 changeText(currentText);
 
 
