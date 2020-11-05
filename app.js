@@ -40,7 +40,7 @@ let textAmount = views.length;
 let currentText = 0;
 
 
-if (!mediaCheck.matches) toggleMenu();
+window.onload = () => {if (!mediaCheck.matches) toggleMenu();} 
 changeText(currentText);
 
 
